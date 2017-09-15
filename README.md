@@ -1,3 +1,3 @@
 # Bootcamp
 
-This is my journey towards my destiny
+This is the journey towards my destiny
