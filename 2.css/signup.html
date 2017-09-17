@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	  
+	<title>Technimble</title>
+	  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    	  
+    <script src="https://use.fontawesome.com/1e59ac095b.js"></script>  
+      
+	<link rel="stylesheet" type="text/css" href="style.css">
+	  
+  </head>
+    
+  <body data-spy="scroll" data-target="nav" data-offset="350">
+    
+      <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top" id="mainnav">
+		  
+		  	<a class="navbar-brand" href="index.php">
+					<img src="images/nsrit2.jpg" width="120" height="40" class="d-inline-block align-top" alt=""><span class="hidden-sm-down" id="logotext">&nbsp;&nbsp;Nadimpalli Satyanarayana Raju Institute of Technology</span>
+			</a>
+		  
+		  	<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">&#9776;</button>
+
+            
+            <div class="collapse navbar-toggleable-xs" id="CollapsingNavbar">  
+
+                  <a class="btn btn-primary pull-xs-right" href="signup.php" role="button" id="signup1">Register!</a>
+				  <ul class="nav navbar-nav pull-xs-right" id="navitems">
+						<li class="nav-item ">
+						  <a class="nav-link active" href="index.php">Home</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="index.php#adventure">Events</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#footer">Contact</a>
+						</li>
+                  </ul>
+
+            </div>   
+     </nav>
+	 
+	 
+<div class="alert alert-danger" role="alert" id="error" ><?php echo $error; ?><a class="close" data-dismiss="alert">&times;</a></div>
+
+
+	<h1 id="register">Registration</h1>
+
+		 <div class="container-fluid row" id="regform">
+
+			<h3>Personal details</h3> 
+			 <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="post">	
+
+				<div id="perteam">	
+					<label id="perteamname" >Number of participants in the team:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<label class="custom-control custom-radio">
+					  <input id="radio1" name="radio" type="radio" class="custom-control-input" checked value="1">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">&nbsp;&nbsp;1</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input id="radio2" name="radio" type="radio" class="custom-control-input" value="2">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">&nbsp;&nbsp;2</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input id="radio3" name="radio" type="radio" class="custom-control-input" value="3">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">&nbsp;&nbsp;3</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input id="radio4" name="radio" type="radio" class="custom-control-input" value="4">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">&nbsp;&nbsp;4</span>
+					</label>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="sr-only" for="fname">First name</label>
+						<input type="text" class="form-control" id="fname" name="fname" placeholder="First name">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="fname2">First name</label>
+						<input type="text" class="form-control" id="fname2" name="fname2" placeholder="First name">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="fname3">First name</label>
+						<input type="text" class="form-control" id="fname3" name="fname3" placeholder="First name">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="fname4">First name</label>
+						<input type="text" class="form-control" id="fname4" name="fname4" placeholder="First name">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="email">Email address</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only">Branch</label>
+						<select class="custom-select" name="branch">
+						  <option disabled selected>Choose your branch</option>
+						  <option value="CSE">CSE</option>
+						  <option value="ECE">ECE</option>
+						  <option value="EEE">EEE</option>
+						  <option value="ME">ME</option>
+						  <option value="CE">CE</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="sr-only" for="mname">Middle name</label>
+						<input type="text" class="form-control" id="mname" name="mname" placeholder="Middle name (optional)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="mname2">Middle name</label>
+						<input type="text" class="form-control" id="mname2" name="mname2" placeholder="Middle name (optional)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="mname3">Middle name</label>
+						<input type="text" class="form-control" id="mname3" name="mname3" placeholder="Middle name (optional)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="mname4">Middle name</label>
+						<input type="text" class="form-control" id="mname4" name="mname4" placeholder="Middle name (optional)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="cname">College name</label>
+						<input type="text" class="form-control" id="cname" name="cname" placeholder="College name">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only">Year</label>
+						<select class="custom-select" name="year">
+						  <option disabled selected>Choose your year</option>
+						  <option value="1">I</option>
+						  <option value="2">II</option>
+						  <option value="3">III</option>
+						  <option value="4">IV</option>
+						</select>
+					</div>
+				</div>  
+
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="sr-only" for="lname">Last name</label>
+						<input type="text" class="form-control" id="lname" name="lname" placeholder="Last name (surname)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="lname2">Last name</label>
+						<input type="text" class="form-control" id="lname2" name="lname2" placeholder="Last name (surname)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="lname3">Last name</label>
+						<input type="text" class="form-control" id="lname3" name="lname3" placeholder="Last name (surname)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="lname4">Last name</label>
+						<input type="text" class="form-control" id="lname4" name="lname4" placeholder="Last name (surname)">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="regno">Registration no</label>
+						<input type="text" class="form-control" id="regno" name="regno" placeholder="Registration no">
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="phno">Phone no</label>
+						<input type="number" class="form-control" id="phno" name="phno" placeholder="Phone no">
+					</div>				
+				</div> 
+
+				<section id="events"> 
+					<label id="inter">Event Interested:</label>
+					<label class="custom-control custom-radio">
+					  <input type="radio" name="event" value="Paper Presentation" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Paper Presentation</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input type="radio" name="event" class="custom-control-input" value="Poster Presentation">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Poster Presentation</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input type="radio" name="event" class="custom-control-input" value="Robo Race">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Robo Race</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input type="radio" name="event" class="custom-control-input" value="Movie Making">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Movie Making</span>
+					</label>
+					<label class="custom-control custom-radio">
+					  <input type="radio" name="event" class="custom-control-input" value="Lan Gaming">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Lan Gaming</span>
+					</label>
+				</section>
+
+				<div class="form-group form-inline" id="comment">
+					<label for="comments">Comments</label>
+					<textarea class="form-control" id="comments" rows="3" cols="100" name="comments" placeholder="Leave your suggestions here (optional)"></textarea>
+				</div>
+
+			   <button type="submit" class="btn btn-primary" name="register">Submit</button>
+
+		 </form>
+	 </div>
+
+	<footer>
+		<div class="container-fliud" id="footer">
+		         <div class="container" id="foot-cont">
+                                <div class="row">
+                                      <div class="col-sm-5" id="contact">
+										  
+										  		<h4>Contact Us</h4>
+											  	<h6>Staff Coordinator(s)</h6>
+											  	<p class="text-muted">M.C. Jagan Sekhar - 9440677755</p>
+											  	<p class="text-muted">R.Kumara Swamy - 9553333271</p>
+											  	<h6>Student Coordinator(s)</h6>
+											  	<p class="text-muted">A.Sagar - 7893004276</p>
+											  	<p class="text-muted">D.Rambabu - 9492635710</p>
+										  
+									  </div>
+                                      <div class="col-sm-4" id="address">
+									  	  
+										  		<h4>Join Us</h4>
+											  	<h6 >Address: </h6>
+											  	<p class="text-muted">Sontyam, Anandapuram,<br> Visakhapatnam,<br> Andhra Pradesh 531173<br></p>
+											  	<h6 >Phone:</h6>
+											  	<p class="text-muted"> 089332 20126</p>
+								
+									  </div>
+                                      <div class="col-sm-3">
+                                          <section id="designer">
+										  
+										  </section>
+                                      </div>
+                                 </div>
+                        </div>
+		</div>  
+	</footer>
+      
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+    </script>
+	      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+	  
+	<script type="text/javascript">
+		
+		$("#fname2,#mname2,#lname2").hide();
+                $("#fname3,#mname3,#lname3").hide();
+                $("#fname4,#mname4,#lname4").hide();
+                $("#fname,#mname,#lname").show();
+		
+	  	$('input[type="radio"]').click(function(){
+            if($(this).attr("value")=="1"){
+                $("#fname2,#mname2,#lname2").hide();
+                $("#fname3,#mname3,#lname3").hide();
+                $("#fname4,#mname4,#lname4").hide();
+                $("#fname,#mname,#lname").show();
+            }                                                                                    
+            if($(this).attr("value")=="2"){
+                $("#fname2,#mname2,#lname2").show();
+                $("#fname3,#mname3,#lname3").hide();
+                $("#fname4,#mname4,#lname4").hide();
+                $("#fname,#mname,#lname").show();
+            }
+            if($(this).attr("value")=="3"){
+                $("#fname2,#mname2,#lname2").show();
+                $("#fname3,#mname3,#lname3").show();
+                $("#fname4,#mname4,#lname4").hide();
+                $("#fname,#mname,#lname").show();
+            }
+			if($(this).attr("value")=="4"){
+                $("#fname2,#mname2,#lname2").show();
+                $("#fname3,#mname3,#lname3").show();
+                $("#fname4,#mname4,#lname4").show();
+                $("#fname,#mname,#lname").show();
+            }
+        });
+	</script>
+      
+  </body>
+</html>
