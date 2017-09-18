@@ -1,0 +1,17 @@
+div{
+    width: 100px;
+}
+
+.img {
+    float: left;
+    margin: 1.66%;
+    width: 30%;
+}
+
+h1{
+    font-family: 'Indie Flower', cursive;
+    padding: 10px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #B4B2B2;
+    width: 30%;
+}
