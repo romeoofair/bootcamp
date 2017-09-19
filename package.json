@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/romeoofair/bootcamp#readme",
   "dependencies": {
-    "bulma": "^0.5.2"
+    "bulma": "^0.5.3"
   }
 }
