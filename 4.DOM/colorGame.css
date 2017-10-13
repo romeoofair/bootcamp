@@ -10,6 +10,7 @@ body {
     float: left;
     margin: 1.66%;
     border-radius: 10%;
+    transition: background 0.6s;
 }
 
 #container{
@@ -43,6 +44,9 @@ button {
     color: steelblue;
     letter-spacing: 1px;
     font-size: inherit;
+    -webkit-transition: all 2.0s ;
+    -moz-transition: all 2.0s ;
+    transition: all 0.3s ;
 }
 
 #stripe{
