@@ -7,19 +7,40 @@
     <link rel="stylesheet" type="text/css" href="assets/css/circles.css">
     <title>PataTap</title>
     <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.core.min.js"></script>
 </head>
 <body>
 
     <script type="text/paperscript" canvas="myCanvas">
         
+        var sound = new Howl({
+            src: ['assets/sounds/bubbles.mp3']
+        });
+        
+        var sound2 = new Howl({
+            src: ['assets/sounds/clay.mp3']
+        });
+
         var circles= [];
 
         function onKeyDown(event) {
+            
             var maxPoint = new Point(view.size.width, view.size.height)
             var randomPoint = Point.random();
             var point = maxPoint * randomPoint;
             var newCircle = new Path.Circle(point, 500);
-            newCircle.fillColor = "orange";
+            // if key is a 
+            if(event.key === "a"){
+                sound.play();
+                newCircle.fillColor = "#2c3e50";
+            }
+            // if key is s 
+            if(event.key === "s"){
+                sound2.play();
+                newCircle.fillColor = "#16a085";
+            }else {
+                newCircle.fillColor = "orange";
+            }
             circles.push(newCircle);
         }   
 
