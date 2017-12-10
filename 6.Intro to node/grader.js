@@ -1,4 +1,4 @@
-let sum=0;
+let sum = 0;
 function average(scores){
     scores.forEach(score => {
         sum+= score;
