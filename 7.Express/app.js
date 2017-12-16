@@ -17,6 +17,16 @@ app.get("/dog", function(req,res){
     res.send("Hi there! Bowww");
 });
 
+app.get("/r/:subredditName/comments/:id/:title/", function(req,res){
+    //console.log(req.params);
+    var subreddit = req.params.subredditName;
+    res.send("Welcome to " + subreddit.toUpperCase() + " Subreddit!!");
+});
+
+app.get("*", function(req,res){
+    res.send("You are a banger!!");
+});
+
 //listen to the request
 
 app.listen(3000, function(){
